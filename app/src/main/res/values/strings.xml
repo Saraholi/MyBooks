@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Books</string>
+
+    <string name="pequeno_principe">
+        O Pequeno Príncipe é uma obra
+        literária do escritor francês Antoine de Saint-Exupéry,
+        que conta a história da amizade entre um homem frustrado
+        por ninguém compreender os seus desenhos,
+        com um principezinho que habita um asteroide no espaço.
+    </string>
+
+
+
+
+</resources>
