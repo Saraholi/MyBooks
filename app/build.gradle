@@ -32,4 +32,9 @@ dependencies {
     implementation'com.android.support:cardview-v7:27.0.2'
 
 
+    // Biblioteca de Room para Banco de daos
+    implementation'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+
+
 }
