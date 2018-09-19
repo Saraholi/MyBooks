@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="370dp"
+    android:layout_height="0dp"
+    android:text="Livros Lidos"
+    android:gravity="center"
+    android:textColor="@color/colorBlack"
+    android:fontFamily="monospace"
+    android:textSize="20dp"
+
+
+    />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="30dp">
+        <!--Aqui é os comandos para colocar imagens do lado esquerdo da tela
+         Ex: A do pequeno principe -->
+
+        <ImageView
+            android:id="@+id/imglivroCapa"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/pequeno_principe" />
+        <!-- Agora vem o Texto e a descrição abaixo  -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+
+            <!-- O Titulo do Livro -->
+            <TextView
+                android:id="@+id/txtLivroTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O pequeno Príncipe"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <!--Aqui vai a Descrição do Livro  -->
+            <TextView
+                android:id="@+id/txtLivroDescricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pequeno_principe"
+
+                />
+            <!--Botão caso o usuário queira enviar o livros para a tela de Livros para ler-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enviar para Livros que quero ler"
+                android:onClick="EnviarLivro"
+
+                />
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgDeleteLivro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete" />
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
