@@ -65,7 +65,7 @@ public class CadastroActivity extends AppCompatActivity {
         }try {
             InputStream input = getContentResolver().openInputStream(data.getData());
 
-            //Coverter  o Bitmap
+            //Converter  o Bitmap
             livroCapa = BitmapFactory.decodeStream(input);
 
             imgLivroCapa.setImageBitmap(livroCapa);
@@ -109,12 +109,7 @@ public class CadastroActivity extends AppCompatActivity {
 
             }
         });
-        //define um botão como negativo.
-        builder.setNegativeButton("Negativo", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) {
 
-            }
-        });
         //cria o AlertDialog
         alerta = builder.create();
         //Exibe

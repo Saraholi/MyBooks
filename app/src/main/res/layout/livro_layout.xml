@@ -5,67 +5,118 @@
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         card_view:cardCornerRadius="4dp">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <!--Aqui é os comandos para colocar imagens do lado esquerdo da tela
-         Ex: A do pequeno principe -->
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_marginRight="15dp"
-            android:id="@+id/imglivroCapa"
-            android:src="@drawable/pequeno_principe"
-            />
-        <!-- Agora vem o Texto e a descrição abaixo  -->
-
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="5dp">
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <!--Aqui é os comandos para colocar imagens do lado esquerdo da tela
+                 Ex: A do pequeno principe -->
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/imglivroCapa"
+                    android:src="@drawable/pequeno_principe"
+                    />
+                <!-- Agora vem o Texto e a descrição abaixo  -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp">
 
 
-            <!-- O Titulo do Livro -->
-            <TextView
-                android:id="@+id/txtLivroTitulo"
+                    <!-- O Titulo do Livro -->
+                    <TextView
+                        android:id="@+id/txtLivroTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="O pequeno Príncipe"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <!--Aqui vai a Descrição do Livro  -->
+                    <TextView
+                        android:id="@+id/txtLivroDescricao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text= "@string/pequeno_principe"
+
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/delete"
+                        android:id="@+id/imgDeleteLivro"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edit"
+                        android:id="@+id/imgEditar"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="O pequeno Príncipe"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                >
 
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quero Ler"
 
-            <!--Aqui vai a Descrição do Livro  -->
-            <TextView
-                android:id="@+id/txtLivroDescricao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text= "@string/pequeno_principe"
+                    />
+                <!--<Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estou Lendo"
+                    android:layout_marginLeft="10dp"/>-->
 
-                />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="já foram Lidos"
+                    android:layout_marginLeft="10dp"/>
 
+            </LinearLayout>
 
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/delete"
-            android:id="@+id/imgDeleteLivro"
-            />
-
-    </LinearLayout>
-
     </android.support.v7.widget.CardView>
-
 </LinearLayout>
+
+
+
+

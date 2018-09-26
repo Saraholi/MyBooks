@@ -11,7 +11,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cadastro" />
+        android:text="Cadastrar Novo Livro"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="serif"
+        android:textSize="26dp"
+        android:layout_marginLeft="50dp"/>
 
 
     <ImageView
@@ -30,7 +34,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Título"
+            android:hint="Título do Livro"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="serif"
             android:id="@+id/txtTitulo"
             android:inputType="text"
             />
@@ -44,7 +50,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descrição"
+            android:hint="Resumo do Livro"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="serif"
             android:id="@+id/txtDescricao"
             android:lines="3"
             />
@@ -55,6 +63,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Salvar"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="serif"
         android:onClick="salvarLivro"
         />
 

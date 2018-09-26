@@ -1,6 +1,7 @@
 package br.com.senaijandira.mybooks;
 
 import android.arch.persistence.room.Room;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -81,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
 
     // Aqui faz o DELETE no Banco
     private void deletaLivro(Livro livro, View v){
+
+
         //Remover do Banco de dados
         myBooksDb.daoLivro().deletar(livro);
 
@@ -102,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         TextView txtLivroDescricao = v.findViewById(R.id.txtLivroDescricao);
 
         ImageView imgDeleteLivro = v.findViewById(R.id.imgDeleteLivro);
+        ImageView imgEditar = v.findViewById(R.id.imgEditar);
 
         imgDeleteLivro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,11 +117,26 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
         imgLivroCapa.setImageBitmap(Utils.toBitmap(livro.getCapa()));
         txtLivroTitulo.setText(livro.getTitulo());
         txtLivroDescricao.setText(livro.getDescricao());
 
         // Comando para exibir na tela.
         root.addView(v);
+    }
+
+    public void enviarLivroLidos(View view) {
+
+    }
+
+
+    public void enviarLivroLer(View view) {
+
+    }
+
+    public void abrirCadastro(View view) {
+
+        startActivity(new Intent(this, CadastroActivity.class));
     }
 }
